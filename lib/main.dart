@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true, // Enable Material 3 design elements
       ),
       // home: TasksScreen(),  // Set home screen to TasksScreen
-      home: SignupPage(),
+      home: LoginPage(),
     );
   }
 }
