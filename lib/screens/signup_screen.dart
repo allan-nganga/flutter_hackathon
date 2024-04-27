@@ -135,7 +135,7 @@ class SignupPage extends StatelessWidget {
                             shape: BoxShape.circle,
                           ),
                         ),
-                        const SizedBox(width: 18),
+                        const SizedBox(width: 15),
                         const Text(
                           "Sign In with Google",
                           style: TextStyle(

@@ -98,7 +98,12 @@ _signup(context) {
     children: [
       const Text("Dont have an account? "),
       TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const SignupPage()),
+            );
+          },
           child: const Text(
             "Sign Up",
             style: TextStyle(color: Colors.purple),
