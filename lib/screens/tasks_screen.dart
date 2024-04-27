@@ -1,3 +1,4 @@
+import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:todolist/model/todo.dart'; // Import ToDo model class
 import 'package:todolist/widgets/todo_items.dart'; // Import ToDoItem widget
@@ -19,7 +20,8 @@ class TasksScreen extends StatefulWidget {
 class _TasksScreenState extends State<TasksScreen> {
   List<ToDo> todosList = ToDo.todoList(); // List of all tasks
   List<ToDo> _foundToDo = []; // List of tasks to display based on category
-  TaskCategory _selectedCategory = TaskCategory.all; // Default selected category
+  TaskCategory _selectedCategory =
+      TaskCategory.all; // Default selected category
 
   @override
   void initState() {
@@ -35,10 +37,14 @@ class _TasksScreenState extends State<TasksScreen> {
           _foundToDo = todosList; // Display all tasks
           break;
         case TaskCategory.completed:
-          _foundToDo = todosList.where((todo) => todo.isDone).toList(); // Display completed tasks
+          _foundToDo = todosList
+              .where((todo) => todo.isDone)
+              .toList(); // Display completed tasks
           break;
         case TaskCategory.pending:
-          _foundToDo = todosList.where((todo) => !todo.isDone).toList(); // Display pending tasks
+          _foundToDo = todosList
+              .where((todo) => !todo.isDone)
+              .toList(); // Display pending tasks
           break;
       }
     });
@@ -169,7 +175,8 @@ class _TasksScreenState extends State<TasksScreen> {
             ListTile(
               title: Text("Completed Tasks"),
               leading: Icon(Icons.check_box),
-              onTap: () => _setSelectedCategory(TaskCategory.completed, context),
+              onTap: () =>
+                  _setSelectedCategory(TaskCategory.completed, context),
             ),
             ListTile(
               title: Text("Pending Tasks"),

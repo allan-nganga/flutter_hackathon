@@ -67,12 +67,7 @@ _inputField(context) {
       ),
       const SizedBox(height: 10),
       ElevatedButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => const SignupPage()),
-          );
-        },
+        onPressed: () {},
         style: ElevatedButton.styleFrom(
           shape: const StadiumBorder(),
           padding: const EdgeInsets.symmetric(vertical: 15),
